@@ -8,7 +8,8 @@ const project = new cdk.JsiiProject({
   projenrcTs: true,
   // packageName: "@alanionita/scaffold-projen-cdk",  /* The "name" in package.json. */
   packageManager: javascript.NodePackageManager.NPM,
-  repositoryUrl: 'https://github.com/alanionita/scaffold-projen-cdk.git',
+  releaseToNpm: true,
+  repositoryUrl: 'https://github.com/alanionita/scaffold-projen-cdk-ts',
   description: 'Projen template for AWS CDK micro-services',
   peerDeps: ['constructs', 'projen'],
   deps: ['aws-lambda', 'axios'],
