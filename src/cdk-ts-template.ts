@@ -1,14 +1,14 @@
 import { github } from 'projen';
 import { TypeScriptProject, TypeScriptProjectOptions } from 'projen/lib/typescript';
 
-export interface TSCDKStackOptions extends TypeScriptProjectOptions {
+export interface TSCDKOptions extends TypeScriptProjectOptions {
   readonly prMention?: string;
 }
 
 export class TSCDKProject extends TypeScriptProject {
   readonly prOwner: string = '@alanionita';
 
-  constructor(options: TSCDKStackOptions) {
+  constructor(options: TSCDKOptions) {
     super({
       ...options,
       pullRequestTemplate: false,
@@ -16,7 +16,7 @@ export class TSCDKProject extends TypeScriptProject {
 
     this.makePRTemplate(options);
   }
-  protected makePRTemplate(options: TSCDKStackOptions) {
+  protected makePRTemplate(options: TSCDKOptions) {
     const lines = [
       '### What does this PR change?',
       '<!--- Describe your changes in detail -->',
