@@ -1,7 +1,6 @@
 import { cdk, javascript } from 'projen';
 import { NpmAccess } from 'projen/lib/javascript';
 const project = new cdk.JsiiProject({
-  packageName: "@alanionita/scaffold-projen-cdk-ts",
   author: 'Alan Ionita',
   authorAddress: '105461667+alanionita@users.noreply.github.com',
   bundledDeps: ['aws-lambda', 'axios'],
@@ -16,6 +15,7 @@ const project = new cdk.JsiiProject({
   npmAccess: NpmAccess.PUBLIC,
   npmProvenance: false,
   packageManager: javascript.NodePackageManager.NPM,
+  packageName: '@alanionita/scaffold-projen-cdk-ts',
   peerDeps: ['constructs', 'projen'],
   projenrcTs: true,
   releaseToNpm: true,
