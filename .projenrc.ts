@@ -4,8 +4,8 @@ const project = new cdk.JsiiProject({
   // packageName: "@alanionita/scaffold-projen-cdk",  /* The "name" in package.json. */
   author: 'Alan Ionita',
   authorAddress: '105461667+alanionita@users.noreply.github.com',
+  bundledDeps: ['aws-lambda', 'axios'],
   defaultReleaseBranch: 'main',
-  deps: ['aws-lambda', 'axios'],
   description: 'Projen template for AWS CDK micro-services',
   devDeps: ['@types/aws-lambda', '@types/node', 'ts-node'],
   githubOptions: {
