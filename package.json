@@ -1,5 +1,5 @@
 {
-  "name": "scaffold-projen-cdk",
+  "name": "@alanionita/scaffold-projen-cdk-ts",
   "description": "Projen template for AWS CDK micro-services",
   "repository": {
     "type": "git",
@@ -72,6 +72,9 @@
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "coverageProvider": "v8",
