@@ -1,1 +1,1 @@
-export * from './cdk-ts-template';
+export * from './ts-cdk-template';
