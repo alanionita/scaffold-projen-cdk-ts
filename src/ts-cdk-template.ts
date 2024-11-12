@@ -1,4 +1,4 @@
-import { github, DependencyType, SampleDir, SampleDirOptions } from 'projen';
+import { github } from 'projen';
 import { TypeScriptProject, TypeScriptProjectOptions } from 'projen/lib/typescript';
 
 export interface TSCDKOptions extends TypeScriptProjectOptions {
@@ -15,8 +15,7 @@ export class TSCDKProject extends TypeScriptProject {
     });
 
     this.makePRTemplate(options);
-    // this.makeSampleMain();
-    this.compileTask.exec("cp src/template/* src/*");
+    this.compileTask.exec("cp src/template/* lib/*");
   }
   protected makePRTemplate(options: TSCDKOptions) {
     const lines = [
@@ -35,14 +34,5 @@ export class TSCDKProject extends TypeScriptProject {
       lines: lines,
     });
 
-  }
-
-  protected makeSampleMain() {
-    const options: SampleDirOptions = {
-      files: {
-        "main.ts": "export * from './lib';",
-      },
-    };
-    new SampleDir(this, "src", options)
   }
 }
