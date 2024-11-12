@@ -15,7 +15,7 @@ export class TSCDKProject extends TypeScriptProject {
     });
 
     this.makePRTemplate(options);
-    this.makeSampleMain();
+    // this.makeSampleMain();
     this.compileTask.exec("cp src/template/* src/*");
   }
   protected makePRTemplate(options: TSCDKOptions) {
